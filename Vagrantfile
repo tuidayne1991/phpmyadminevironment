@@ -26,9 +26,13 @@ config.vm.provision :chef_solo do |chef|
    #chef.roles_path = "../my-recipes/roles"
    #chef.data_bags_path = "../my-recipes/data_bags"
    chef.add_recipe "xcode"
+   chef.add_recipe "php"
    chef.log_level = :debug
    #chef.add_role "web"
 
+   chef.roles_path = "roles"
+
+   chef.add_role "xcode_attributes"
    # You may also specify custom JSON attributes:
    chef.json = { 
        "mysql" => {
