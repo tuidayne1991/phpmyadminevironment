@@ -32,7 +32,9 @@ config.vm.provision :chef_solo do |chef|
    # You may also specify custom JSON attributes:
    chef.json = { 
        "mysql" => {
-           "server_root_password" => "abc123"
+           "server_root_password"   => "abc123",
+           "server_debian_password" => "abc123",
+           "server_repl_password"   => "abc123"
            },
 
        "nginx" => {
