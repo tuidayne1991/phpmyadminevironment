@@ -21,6 +21,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
+  config.vm.synced_folder "./webapp/protected/runtime", "/vagrant/webapp/protected/runtime", :mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "./webapp/assets", "/vagrant/webapp/assets", :mount_options => ["dmode=777","fmode=666"]
+
+  config.vm.provider :virtualbox do |vb|
+      vb.customize ['setextradata', :id, 'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1']
+  end
+
+
 config.vm.provision :chef_solo do |chef|
    chef.cookbooks_path = "chef/cookbooks"
    #chef.roles_path = "../my-recipes/roles"
@@ -30,9 +38,6 @@ config.vm.provision :chef_solo do |chef|
    chef.log_level = :debug
    #chef.add_role "web"
 
-   chef.roles_path = "roles"
-
-   chef.add_role "xcode_attributes"
    # You may also specify custom JSON attributes:
    chef.json = { 
        "mysql" => {
