@@ -1,6 +1,6 @@
 [submodule "drstartup"]
 	path = webapp
-	url = git://github.com/tuidayne1991/fundable
+	url = git@github.com:tuidayne1991/fundable.git
 
 [submodule "mysql"]
 	path = chef/cookbooks/mysql
