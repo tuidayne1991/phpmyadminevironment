@@ -1,7 +1,3 @@
-[submodule "drstartup"]
-	path = webapp
-	url = git@github.com:tuidayne1991/fundable.git
-
 [submodule "mysql"]
 	path = chef/cookbooks/mysql
 	url = https://github.com/opscode-cookbooks/mysql.git
@@ -14,3 +10,7 @@
 	path = chef/cookbooks/php
 	url = https://github.com/opscode-cookbooks/php.git
 
+[submodule "webapp"]
+	path = webapp
+	url = git@github.com:tuidayne1991/fundable.git
+	branch = master
