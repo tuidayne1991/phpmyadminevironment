@@ -1,0 +1,7 @@
+name             "xcode"
+maintainer       "xcodevn"
+maintainer_email "xcodevn@gmail.com"
+license          "GPL"
+description      "Installs/Configures Nginx & PHP-FPM"
+version          "0.1.0"
+depends          "nginx apt git mysql php"
