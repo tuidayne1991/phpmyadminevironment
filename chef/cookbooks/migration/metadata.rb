@@ -1,0 +1,7 @@
+name             "migration"
+maintainer       "tonycao"
+maintainer_email "tonycaovn@gmail.com"
+license          "GPL"
+description      "run script Yii Migration"
+version          "0.1.0"
+depends          "nginx apt git mysql php"

@@ -33,8 +33,9 @@ config.vm.provision :chef_solo do |chef|
    chef.cookbooks_path = "chef/cookbooks"
    #chef.roles_path = "../my-recipes/roles"
    #chef.data_bags_path = "../my-recipes/data_bags"
-   chef.add_recipe "php"
    chef.add_recipe "xcode"
+   chef.add_recipe "php"
+   chef.add_recipe "migration"
    chef.log_level = :debug
    #chef.add_role "web"
 
