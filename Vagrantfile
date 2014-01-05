@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder "./webapp/protected/runtime", "/vagrant/webapp/protected/runtime", :mount_options => ["dmode=777","fmode=666"]
   config.vm.synced_folder "./webapp/assets", "/vagrant/webapp/assets", :mount_options => ["dmode=777","fmode=666"]
-
+  config.vm.synced_folder "./webapp/images", "/vagrant/webapp/images", :mount_options => ["dmode=777","fmode=666"]
   config.vm.provider :virtualbox do |vb|
       vb.customize ['setextradata', :id, 'VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root', '1']
   end
