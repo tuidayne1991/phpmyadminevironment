@@ -35,3 +35,6 @@ execute "mysql-install-privileges" do
       command "mysql -u root -p#{node['mysql']['server_root_password']} < /vagrant/command.sql"      
 end
 
+execute "yii-migration" do
+      command "cd /vagrant/webapp/protected; { echo \"yes\"; } | ./yiic migrate up"
+end
