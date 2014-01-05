@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 
 Vagrant::Config.run do |config|
-  config.vm.forward_port 80, 8080
+  config.vm.forward_port 80, 3000
 end
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -33,8 +33,8 @@ config.vm.provision :chef_solo do |chef|
    chef.cookbooks_path = "chef/cookbooks"
    #chef.roles_path = "../my-recipes/roles"
    #chef.data_bags_path = "../my-recipes/data_bags"
-   chef.add_recipe "xcode"
    chef.add_recipe "php"
+   chef.add_recipe "xcode"
    chef.log_level = :debug
    #chef.add_role "web"
 
