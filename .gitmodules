@@ -12,5 +12,5 @@
 
 [submodule "webapp"]
 	path = webapp
-	url = git@github.com:tuidayne1991/fundable.git
+	url = git@github.com:tuidayne1991/phpmyadmin.git
 	branch = master
