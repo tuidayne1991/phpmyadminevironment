@@ -9,8 +9,3 @@
 [submodule "php"]
 	path = chef/cookbooks/php
 	url = https://github.com/opscode-cookbooks/php.git
-
-[submodule "webapp"]
-	path = webapp
-	url = git@github.com:tuidayne1991/phpmyadmin.git
-	branch = master
